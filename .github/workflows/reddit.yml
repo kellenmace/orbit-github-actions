@@ -16,7 +16,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "14"
-      - run: npx @orbit-love/reddit --posts --comments --hours=1 --subreddit "${{ matrix.subreddit }}"
+      - run: |
+          npx @orbit-love/reddit --posts --comments --hours=1 --filter=headless --subreddit "${{ matrix.subreddit }}"
+          npx @orbit-love/reddit --posts --comments --hours=1 --filter=atlas --subreddit "${{ matrix.subreddit }}"
+          npx @orbit-love/reddit --posts --comments --hours=1 --filter=faust --subreddit "${{ matrix.subreddit }}"
         name: "Get Posts & Add to Orbit"
         env:
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID}}
