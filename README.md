@@ -8,4 +8,4 @@ The Reddit Action is based on this template:
 https://github.com/orbit-love/github-actions-templates/blob/main/Reddit/reddit.yml
 
 Documentation on the `@orbit-love/reddit` package is here:
-https://www.npmjs.com/package/@orbit-love/reddit
+https://www.npmjs.com/package/@orbit-love/reddit/
